@@ -1,0 +1,429 @@
+/* Basic Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #0A2342; /* Dark Blue */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, .dropdown:hover > a {
+    background-color: #FFD700; /* Gold */
+    color: #0A2342; /* Dark Blue */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 5px;
+    border-radius: 4px;
+    min-width: 180px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Hero Section */
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+}
+
+.hero-content h2:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #0A2342; /* Dark Blue */
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    word-spacing: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #FFD700; /* Gold */
+    color: #0A2342; /* Dark Blue */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6c300;
+}
+
+.cta-button-alt {
+    background-color: #0A2342; /* Dark Blue */
+    color: #fff; /* White text */
+}
+
+.cta-button-alt:hover {
+    background-color: #001f3f; /* Darker Blue */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* About Platforms Section */
+#about-platforms {
+    text-align: center;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.platform-card {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.platform-card .cta-button {
+    margin-top: auto;
+}
+
+.platform-card img {
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.platform-card h3 {
+    color: #0A2342; /* Dark Blue */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Service Item Section */
+.service-item {
+    margin-bottom: 2rem;
+}
+
+.service-item h2 {
+    color: #0A2342; /* Dark Blue */
+    border-bottom: 2px solid #ccc; /* Grey */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Form */
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Other Sections */
+#mission h2, #about-us h2, #service-details h2 {
+    color: #0A2342; /* Dark Blue */
+    border-bottom: 3px solid #ccc; /* Grey */
+    padding-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+#service-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+#service-details ul li {
+    background: url('checkmark.svg') no-repeat left center;
+    background-size: 20px;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Subscribe Section */
+#subscribe {
+    text-align: center;
+    background-color: #0A2342; /* Dark Blue */
+    color: #fff;
+}
+
+#subscribe h2 {
+    color: #FFD700; /* Gold */
+    border: none;
+}
+
+#subscribe p {
+    margin-bottom: 1.5rem;
+}
+
+#subscribe input[type="email"] {
+    padding: 12px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#subscribe button {
+    padding: 12px 25px;
+    background-color: #FFD700; /* Gold */
+    color: #0A2342; /* Dark Blue */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#subscribe button:hover {
+    background-color: #e6c300;
+}
+
+.platform-card-description {
+    min-height: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0A2342;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 20px;
+    }
+
+    .dropdown-menu {
+        display: block;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 20px 10px 40px;
+        color: #fff;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #FFD700;
+        color: #0A2342;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #hero {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .platforms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-card h3 {
+        font-size: 1rem;
+    }
+
+    #subscribe input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #subscribe button {
+        width: 100%;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .platform-card {
+        padding: 1rem;
+    }
+}
